@@ -42,7 +42,7 @@ def summarize(self):
             return summary['choices'][0]['text']
     else:
         seg_summaries = ""
-        segment_count = math.ceil(len(self)/16000) #2048 tokens = 1500 words = 8000 characters
+        segment_count = math.ceil(len(self)/15000) #2048 tokens = 1500 words = 8000 characters
         per_segment = math.ceil(len(self)/segment_count)
         segmented_transcript = textwrap.wrap(self, per_segment)
         for segment in segmented_transcript:
