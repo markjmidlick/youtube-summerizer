@@ -31,7 +31,7 @@ def get_transcription(self):
     return total_transcript
 
 def summarize(self):
-    if len(self) < 16000:
+    if len(self) < 15000:
         # Use the OpenAI API to generate a summary of the transcription
         prompt = ("Please give me a one sentence summary of what the following text is about:" + self)
         model_engine = "text-davinci-003"
